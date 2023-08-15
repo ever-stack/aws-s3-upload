@@ -2,11 +2,11 @@ import React , {useState} from 'react';
 import { uploadFile } from 'react-s3';
 
 
-const S3_BUCKET ='';
-const REGION ='';
-const ACCESS_KEY ='';
-const SECRET_ACCESS_KEY ='';
-
+const S3_BUCKET = process.env.REACT_APP_S3_BUCKET;
+const REGION = process.env.REACT_APP_REGION;
+const ACCESS_KEY = process.env.REACT_APP_ACCESSKEYID;
+const SECRET_ACCESS_KEY = process.env.REACT_APP_SECRETACCESSKEY;
+console.log(S3_BUCKET)
 const config = {
     bucketName: S3_BUCKET,
     region: REGION,
